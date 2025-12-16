@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Waitlist User",
+  "description": "Schema for the user object stored in localStorage from the contact/waitlist form.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The user's full name."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "The user's email address."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The ISO 8601 timestamp of the submission."
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "timestamp"
+  ]
+}

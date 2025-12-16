@@ -1,0 +1,20 @@
+{
+  "name": "waitlist",
+  "description": "A contract for storing waitlist entries in the browser's localStorage.",
+  "schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        }
+      },
+      "required": ["name", "email"]
+    }
+  }
+}

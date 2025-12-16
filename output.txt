@@ -1,0 +1,4 @@
+The feature directory `specs/006-physical-ai-human/` has been created.
+Placeholder files `plan.md` and `spec.md` have been created inside `specs/006-physical-ai-human/`.
+
+Please review and populate these files with the actual plan and specification details for "Physical AI & Human". Once these documents are complete, I can proceed with generating the actionable `tasks.md` file based on their content.

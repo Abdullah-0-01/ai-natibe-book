@@ -1,0 +1,21 @@
+/* Empty CSS module for Navbar to avoid build errors */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 64px;
+}
+
+.navbarInner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbarItems {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

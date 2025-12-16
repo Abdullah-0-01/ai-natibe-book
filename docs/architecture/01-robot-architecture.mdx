@@ -1,0 +1,199 @@
+---
+title: Robot Architecture
+description: Understanding the physical and software architecture of embodied AI systems and humanoid robots.
+author: Qaimudin Khuwaja
+date: 2025-12-10
+---
+
+# Robot Architecture
+
+The architecture of a robot encompasses both its physical structure and the software systems that control it. A well-designed architecture enables efficient, capable, and maintainable embodied AI systems.
+
+## Physical Architecture
+
+### Mechanical Structure
+
+#### Chassis and Frame
+- **Humanoid Form**: Torso, limbs, and head resembling human structure
+- **Industrial Manipulators**: Optimized for specific manipulation tasks
+- **Mobile Bases**: Optimized for locomotion and environment navigation
+- **Modular Designs**: Interchangeable components for flexibility
+
+#### Actuators
+- **Motors**: Servos and continuous motors for precise control
+- **Hydraulics**: High-force applications (industrial robots)
+- **Pneumatics**: Lightweight, compliant actuation
+- **Tendons**: Mimicking biological muscle structures
+
+#### Kinematics and Dynamics
+- **Forward Kinematics**: From joint angles to end-effector position
+- **Inverse Kinematics**: From desired position to required joint angles
+- **Dynamics**: Understanding forces, torques, and accelerations
+- **Compliance**: Controlled yielding under external forces
+
+### Sensor Suite
+
+#### Vision Systems
+- Monocular and stereo cameras
+- Infrared sensors
+- LIDAR for 3D mapping
+- Event cameras for fast motion
+
+#### Proprioceptive Sensors
+- Inertial Measurement Units (IMUs)
+- Joint encoders
+- Inclinometers for orientation
+
+#### Interaction Sensors
+- Force/torque sensors
+- Pressure sensors
+- Tactile arrays
+- Proximity sensors
+
+## Software Architecture
+
+### Control Hierarchy
+
+#### Low-Level Control
+```
+Sensor Input → Processing → Motor Commands → Actuator Control
+```
+- High frequency (100-1000+ Hz)
+- Direct control of motors and actuators
+- Safety enforcement
+- Sensor fusion
+
+#### Mid-Level Planning
+- Task decomposition
+- Motion planning
+- Collision avoidance
+- Grasping strategy selection
+
+#### High-Level Decision Making
+- Goal formulation
+- Task planning
+- Resource allocation
+- Learning and adaptation
+
+### Common Frameworks
+
+#### ROS (Robot Operating System)
+- Modular architecture
+- Publisher-subscriber messaging
+- Tools for simulation and visualization
+- Extensive community support
+
+#### Behavior Trees
+- Hierarchical task representation
+- Reactive execution model
+- Easy to modify and extend
+- Clear success/failure semantics
+
+#### POMDP (Partially Observable Markov Decision Process)
+- Handling uncertainty
+- Optimal decision-making under incomplete information
+- Learning from interaction
+- Adaptive behavior
+
+## Integration Patterns
+
+### Perception-to-Planning Pipeline
+```
+Raw Sensor Data
+    ↓
+Sensor Fusion
+    ↓
+Perception Modules
+    ↓
+Semantic Understanding
+    ↓
+Planning Modules
+    ↓
+Control Execution
+```
+
+### Real-time Constraints
+- **Hard Real-Time**: Must complete within deadline (safety-critical)
+- **Soft Real-Time**: Prefer timely completion, acceptable to miss occasionally
+- **Non-Real-Time**: Background learning and optimization
+
+## Example Architectures
+
+### Humanoid Robot
+```
+Head → Eyes (stereo vision), microphones
+Torso → Inertial sensors, thermal sensors
+Arms → Servos, force sensors
+Legs → Motors, inclinometers, pressure sensors
+Processing → Onboard computing + optional cloud connectivity
+```
+
+### Mobile Manipulation Platform
+```
+Mobile Base → Wheels/tracks, LIDAR, safety sensors
+Manipulator Arm → Multiple joints, gripper, force/torque sensors
+End Effector → Cameras, tactile sensors
+Processing → Mobile computing unit
+```
+
+### Collaborative Robot (Cobot)
+```
+Multiple Joints → Motors with torque sensing
+Force Sensors → Safety monitoring
+Interface → Natural input methods
+Compliance → Soft limits and impedance control
+```
+
+## Design Principles
+
+### Modularity
+- Independent components that can be updated
+- Clear interfaces between modules
+- Reusable components across different robots
+
+### Redundancy
+- Backup sensors and actuators
+- Graceful degradation
+- Safety through redundancy
+
+### Scalability
+- Ability to add new sensors or actuators
+- Supporting both simple and complex behaviors
+- From simulation to real hardware
+
+### Robustness
+- Handling sensor noise and failures
+- Dealing with unexpected environments
+- Safe default behaviors
+
+## Challenges in Architecture Design
+
+### Latency
+- Sensor-to-actuator delay must be managed
+- Real-time guarantees in complex systems
+- Trade-offs between sophistication and speed
+
+### Power Management
+- Autonomous systems need sufficient energy
+- Battery life vs. capability trade-off
+- Thermal management
+
+### Computational Load
+- Complex perception takes CPU time
+- Limited onboard computing on mobile platforms
+- Cloud vs. edge computing trade-offs
+
+### Maintainability
+- Complex systems are hard to debug
+- Need for simulation and testing tools
+- Documentation and modularity critical
+
+## Future Directions
+
+- **Modular Robot Swarms**: Multiple simple units working together
+- **Soft Robotics**: More compliant, safer designs
+- **Bio-Inspired Architectures**: Learning from biological systems
+- **Neuromorphic Computing**: Event-based processing similar to brains
+- **Quantum Computing**: Potential for optimization of planning
+
+A well-designed robot architecture enables sophisticated behavior while remaining maintainable and extensible. As robotics technology advances, architectural principles from AI, biomechanics, and control theory continue to converge toward increasingly capable systems.
