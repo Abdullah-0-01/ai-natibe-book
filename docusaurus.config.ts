@@ -13,10 +13,10 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://ai-native-book-seven.vercel.app',
+  url: 'https://ai-natibe-book-ma8axe43o-ranas-projects-55a7e9e4.vercel.app/',
   baseUrl: '/',
 
-  organizationName: 'QaimudinKhuwaja',
+  organizationName: 'Muhammad Abdullah',
   projectName: 'ai-native-book',
 
   // ✅ Fixed: build will not fail on broken links now
@@ -60,7 +60,7 @@ const config: Config = {
         {to: '/about', label: 'About', position: 'left'},
         {to: '/contact', label: 'Contact', position: 'left'},
         {
-          href: 'https://github.com/QaimudinKhuwaja/ai-native-book',
+          href: 'https://github.com/Abdullah-0-01/ai-natibebook-chatbot.git',
           label: 'GitHub',
           position: 'right',
         },
@@ -72,9 +72,8 @@ const config: Config = {
         {
           title: 'Community',
           items: [
-            {label: 'GitHub', href: 'https://github.com/QaimudinKhuwaja'},
-            {label: 'Facebook', href: 'https://www.facebook.com/QaimudinKhuwaja'},
-            {label: 'LinkedIn', href: 'https://www.linkedin.com/in/QaimudinKhuwaja'},
+            {label: 'GitHub', href: 'https://github.com/Abdullah-0-01/ai-natibebook-chatbot.git'},
+            {label: 'LinkedIn', href: 'https://www.linkedin.com/posts/abdullah-abdulrehman-989b352b3_ai-chatbots-innovation-activity-7393969295577481217-ZmUA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEtzzjkBUZDhEE_UwZtw7F8HlDSW_vJ_Rhk'},
           ],
         },
       ],
